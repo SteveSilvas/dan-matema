@@ -5,15 +5,44 @@ import { RiFacebookFill, RiInstagramFill, RiPhoneFill, RiMailFill, RiLinkedinFil
 import Link from "next/link";
 import sendEmail from "@/services/SendEmailService";
 import { useState } from "react";
+import { useAtom } from "jotai";
+import toastContext from "@/context/ToastAtom";
+import ContactBar from "@/components/ContactBar";
 
 export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [sendMailMessage, setSendMailMessage] = useState("Email enviado com sucesso. Aguarde meu contato");
+    const [toast, setToast] = useAtom(toastContext);
 
     const handleSendEmail = async (e: React.FormEvent) => {
         e.preventDefault();
-        await sendEmail(message, name, email);
+
+        if (!isValidateFields())
+            return;
+
+        const emailSended = await sendEmail({
+            fromName: name,
+            fromEmail: email,
+            message: message
+        })
+
+        setToast({
+            isOpen: true,
+            text: emailSended.message ?? ""
+        })
+    }
+
+    const isValidateFields = () => {
+        if (!name || !email || !message) {
+            setToast({
+                isOpen: true,
+                text: "Preencha todos os campos."
+            });
+            return false;
+        }
+        return true;
     }
 
     return (
@@ -34,44 +63,11 @@ export default function Contact() {
                 <p className="text-xl text-gray-800  p-4">
                     Entre em contato para desenvolvermos soluções juntos e me acompanhe nas redes sociais:
                 </p>
-                <div className="flex gap-4 p-2 flex-wrap">
-                    <a
-                        className="flex justify-center items-center text-[12px]"
-                        href="mailto:profdanmatema@gmail.com">
-                        <RiMailFill className="text-3xl text-purple-700 hover:text-purple-500" />
-                    </a>
-                    <a
-                        className="flex justify-center items-center text-[12px]"
-                        href="https://wa.me/5511947934827"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <RiPhoneFill className="text-3xl text-purple-700 hover:text-purple-500" />
-                    </a>
-                    <Link
-                        title="Facebook"
-                        className="flex justify-center items-center text-[12px]"
-                        href={"https://www.facebook.com/danmatema/"}
-                        target="_blank">
-                        <RiFacebookFill className="text-3xl text-purple-700 hover:text-purple-500" />
-                    </Link>
-                    <Link
-                        title="Instagram"
-                        className="flex justify-center items-center text-[12px]"
-                        href={"https://www.instagram.com/danmatema/"}
-                        target="_blank">
-                        <RiInstagramFill className="text-3xl text-purple-700 hover:text-purple-500" />
-                    </Link>
-                    <RiLinkedinFill className="text-3xl text-purple-700 hover:text-purple-500" />
-                    <Link
-                        title="Youtube"
-                        className="flex justify-center items-center text-[12px]"
-                        href={"https://www.youtube.com/c/%C3%89oesquema"}
-                        target="_blank">
-                        <RiYoutubeFill className="text-3xl text-purple-700 hover:text-purple-500" />
-                    </Link>
-                </div>
+               <ContactBar/>
 
-                <form className="flex flex-col items-center w-full gap-4" onSubmit={handleSendEmail}>
+                <form
+                    className="flex flex-col items-center w-full gap-4"
+                    onSubmit={handleSendEmail}>
                     <input
                         type="text"
                         name="name"
@@ -100,7 +96,7 @@ export default function Contact() {
                     ></textarea>
                     <button
                         type="submit"
-                        className="bg-purple-700 text-white p-2 rounded-md w-3/4 mb-4"
+                        className="bg-blue_d :hover:bg-yellow_d text-white p-2 rounded-md w-3/4 mb-4"
                     >
                         Enviar
                     </button>

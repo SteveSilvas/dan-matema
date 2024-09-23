@@ -12,6 +12,8 @@ const config: Config = {
         sans: ['var(--font-default)'],
       },
       colors: {
+        blue_d:"#26378d",
+        yellow_d: "#FAAF01",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

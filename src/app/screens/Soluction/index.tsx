@@ -9,7 +9,7 @@ import { RiSearch2Fill, RiSearchFill, RiSearchLine } from "react-icons/ri";
 export default function Solcution() {
     return (
         <div className="text-center bg-white min-h-[80vh]" id="solucoes">
-            <h1 className="text-4xl text-purple-800 px-10">
+            <h1 className="text-4xl text-blue_d font-bold px-10">
                 Soluções Educacionais
             </h1>
 

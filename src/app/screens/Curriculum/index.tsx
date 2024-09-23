@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Curriculum() {
     return (
         <div className="text-center bg-white min-h-[80vh]" id="curriculo">
-            <h1 className="text-4xl text-purple-800 px-10">
+            <h1 className="text-4xl text-blue_d font-bold text-start px-4">
                 Conheça mais sobre Dan Matema
             </h1>
             <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 ">

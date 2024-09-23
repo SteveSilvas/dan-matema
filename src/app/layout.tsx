@@ -6,10 +6,13 @@ import Contact from "./screens/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Curriculum from "./screens/Curriculum";
 import Solcution from "./screens/Soluction";
 import CarrouselPage from "./screens/CarrouselPage";
+import ToastComponent from '@/components/Toast';
+import { useAtom } from 'jotai';
+import toastContext from '@/context/ToastAtom';
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -24,6 +27,18 @@ export default function RootLayout({
 }>) {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [toast, setToast] = useAtom(toastContext)
+
+  useEffect(() => {
+   if(toast.isOpen){
+    setTimeout(() => {
+      setToast({
+        isOpen: false,
+        text: ''
+      })
+    }, 4000);
+   }
+  }, [toast]);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -31,7 +46,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`h-screen w-screen overflow-x-hidden ${openSans.variable} font-sans`}>
-        <div className="w-full min-h-20">
+        <div className='fixed z-50 right-0'>
+          {toast.isOpen && <ToastComponent text={toast.text} />}
+
+        </div>
+        <div className="w-full min-h-10">
           <div className="top-0 w-full fixed z-10">
             <Header />
             <Navbar
