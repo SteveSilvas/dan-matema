@@ -45,6 +45,7 @@ export async function POST(request: NextRequest) {
         });
 
     } catch (error) {
+        console.error(error);
         return NextResponse.json({
             success: false,
             message: "Falha ao enviar e-mail, tente novamente mais tarde.",

@@ -11,7 +11,7 @@ export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [toast, setToast] = useAtom(toastContext);
+    const [, setToast] = useAtom(toastContext);
 
     const handleSendEmail = async (e: React.FormEvent) => {
         e.preventDefault();
