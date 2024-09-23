@@ -33,6 +33,12 @@ export async function POST(request: NextRequest) {
             html: "<p style='font-family: sans-serif; font-size: 16px; '>" + fromName + " (" + fromEmail + ")</p><p style='font-family: sans-serif; font-size: 16px;'>" + message + "</p>",
         });
 
+        if (!mailSent) {
+            return NextResponse.json({
+                success: false,
+                message: "Falha ao enviar e-mail, tente novamente mais tarde.",
+            });
+        }
         return NextResponse.json({
             success: true,
             message: "Email enviado com sucesso",

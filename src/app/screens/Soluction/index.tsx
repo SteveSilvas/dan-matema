@@ -5,7 +5,7 @@ import irium_educacao from "@/assets/soluctions/irium_educacao.png";
 import esq_educacao from "@/assets/soluctions/esq_educacao.png";
 import Card from "@/components/Card";
 import DefaultButton from "@/components/DefaultButton";
-import { RiSearch2Fill, RiSearchFill, RiSearchLine } from "react-icons/ri";
+import { RiSearchLine } from "react-icons/ri";
 export default function Solcution() {
     return (
         <div className="text-center bg-white min-h-[80vh]" id="solucoes">
@@ -32,7 +32,7 @@ export default function Solcution() {
                         <DefaultButton
                             title="Saiba mais"
                             to=""
-                            children={<RiSearchLine size={20} />} />
+                            children={<><RiSearchLine size={20} /></>} />
                     </div>
                 </Card>
 
@@ -54,7 +54,7 @@ export default function Solcution() {
                         <DefaultButton
                             title="Saiba mais"
                             to=""
-                            children={<RiSearchLine size={20} />}
+                            children={<><RiSearchLine size={20} /></>}
                         />
                     </div>
                 </Card>
@@ -76,7 +76,7 @@ export default function Solcution() {
                         <DefaultButton
                             title="Saiba mais"
                             to=""
-                            children={<RiSearchLine size={20} />}
+                            children={<><RiSearchLine size={20} /></>}
                         />
                     </div>
                 </Card>
@@ -98,7 +98,7 @@ export default function Solcution() {
                         <DefaultButton
                             title="Saiba mais"
                             to=""
-                            children={<RiSearchLine size={20} />}
+                            children={<><RiSearchLine size={20} /></>}
                         />
                     </div>
                 </Card>

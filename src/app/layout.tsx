@@ -38,7 +38,7 @@ export default function RootLayout({
       })
     }, 4000);
    }
-  }, [toast]);
+  }, [toast, setToast]);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };

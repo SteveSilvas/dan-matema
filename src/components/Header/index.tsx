@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { RiFacebookFill, RiInstagramFill, RiMailFill, RiPhoneFill, RiYoutubeFill } from "react-icons/ri";
 
-export interface IHeaderProps {
-}
-
-const Header: React.FC<IHeaderProps> = () => {
+const Header: React.FC = () => {
     return (
         <section className="hidden md:flex bg-yellow_d top-0 w-[100%] mx-0 justify-around items-center p-1 text-xs">
             <div className="flex justify-center items-center flex-1 gap-1">

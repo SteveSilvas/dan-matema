@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import { GrClose, GrMenu } from "react-icons/gr";
-import { RiCloseFill } from "react-icons/ri";
 
 export interface INavbarProps {
     isOpen: boolean;

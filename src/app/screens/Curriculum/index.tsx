@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Curriculum() {
     return (
         <div className="text-center bg-white min-h-[80vh]" id="curriculo">

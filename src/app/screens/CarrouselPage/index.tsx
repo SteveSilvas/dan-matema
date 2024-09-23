@@ -2,8 +2,6 @@ import React from 'react';
 import criancas_chao from '@/assets/criancas_chao.png';
 import foto1 from '@/assets/opened-book-with-apple-desk-near-chalkboard.jpg';
 import foto2 from '@/assets/students-knowing-right-answer.jpg';
-import Image from 'next/image';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Carousel, { Slide } from '@/components/Carousel';
 const CarrouselPage: React.FC = () => {
 

@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import danmatema_contact from "@/assets/danmatema_contact.png";
-import { RiFacebookFill, RiInstagramFill, RiPhoneFill, RiMailFill, RiLinkedinFill, RiYoutubeFill } from "react-icons/ri";
-import Link from "next/link";
 import sendEmail from "@/services/SendEmailService";
 import { useState } from "react";
 import { useAtom } from "jotai";
@@ -13,7 +11,6 @@ export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [sendMailMessage, setSendMailMessage] = useState("Email enviado com sucesso. Aguarde meu contato");
     const [toast, setToast] = useAtom(toastContext);
 
     const handleSendEmail = async (e: React.FormEvent) => {

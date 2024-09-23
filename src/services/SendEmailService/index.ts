@@ -26,7 +26,8 @@ async function sendEmail(mailData: IMailSendMailData): Promise<ISendMailResult> 
             message: "Email enviado com sucesso. Aguarde meu contato."
         };
 
-    } catch (e) {
+    } catch (e:any) {
+        console.log(e);
         return {
             success: false,
             message: "Erro ao enviar e-mail, tente novamente mais tarde."

@@ -1,19 +1,14 @@
 
 import { Toast, ToastToggle } from "flowbite-react";
-import { defaultConfig } from "next/dist/server/config-shared";
-import { HiFire } from "react-icons/hi";
 import { RiMessage2Fill } from "react-icons/ri";
 
 export interface IToastComponent {
     isOpen?: boolean;
     text: string;
-    setIsOpen?: (value: boolean) => void;
-
 }
 const ToastComponent: React.FC<IToastComponent> = ({
     isOpen = true,
     text,
-    setIsOpen
 }) => {
     return isOpen ? (
         <Toast>
