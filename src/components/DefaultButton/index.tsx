@@ -9,6 +9,7 @@ export interface IDefaultButton {
     className?: string;
     type?: "button" | "submit" | "reset" | undefined;
     disabled?: boolean;
+    target?: "_blank" | "_self" | "_parent" | "_top" | "framename" | "none" | undefined;
 }
 const DefaultButton: React.FC<IDefaultButton> = ({
     children,
@@ -17,10 +18,12 @@ const DefaultButton: React.FC<IDefaultButton> = ({
     to,
     className,
     type,
-    disabled
+    disabled,
+    target = "_self"
 }) => {
     return (
         <Link
+            target={target}
             onClick={onClick}
             href={to}
             hidden={disabled}

@@ -9,8 +9,8 @@ import { RiSearchLine } from "react-icons/ri";
 
 export default function Solcution() {
     return (
-        <div className="text-center bg-white min-h-[80vh]" id="solucoes">
-            <h1 className="text-4xl text-blue_d font-bold px-10">
+        <div className="text-start bg-white min-h-[80vh]" id="solucoes">
+            <h1 className="text-4xl text-blue_d font-bold px-4">
                 Soluções Educacionais
             </h1>
 
@@ -30,7 +30,10 @@ export default function Solcution() {
                             Materiais matemáticos, seleção do
                             Dan Matema com condições exclusivas
                         </span>
-                        <DefaultButton title="Saiba mais" to="">
+                        <DefaultButton
+                            title="Saiba mais"
+                            to="https://danmatema.mmpmateriaismatematicos.com.br/"
+                            target="_blank">
                             <RiSearchLine size={20} />
                         </DefaultButton>
                     </div>
@@ -51,7 +54,10 @@ export default function Solcution() {
                             Curso - Alfabetização
                             Matemática com Dan Matema
                         </span>
-                        <DefaultButton title="Saiba mais" to="">
+                        <DefaultButton
+                            title="Saiba mais"
+                            to="https://curso.danmatema.com.br/"
+                            target="_blank">
                             <RiSearchLine size={20} />
                         </DefaultButton>
                     </div>
@@ -71,7 +77,11 @@ export default function Solcution() {
                         <span>
                             Projetos Educacionais
                         </span>
-                        <DefaultButton title="Saiba mais" to="">
+                        <DefaultButton
+                            title="Saiba mais"
+                            to="https://www.irium.com.br/"
+                            target="_blank"
+                        >
                             <RiSearchLine size={20} />
                         </DefaultButton>
                     </div>
@@ -91,7 +101,9 @@ export default function Solcution() {
                         <span>
                             Hub de Produtos Educacionais
                         </span>
-                        <DefaultButton title="Saiba mais" to="">
+                        <DefaultButton title="Saiba mais"
+                            to="https://eoesquema.com/"
+                            target="_blank">
                             <RiSearchLine size={20} />
                         </DefaultButton>
                     </div>
