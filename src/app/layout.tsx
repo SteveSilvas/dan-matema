@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
         <title>Dan Matema</title>
-        {/* <link rel="ico" href="@/assets/dm_logo.svg" /> */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`h-screen w-screen overflow-x-hidden ${openSans.variable} font-sans`}>
         <div className='fixed z-50 right-0'>
