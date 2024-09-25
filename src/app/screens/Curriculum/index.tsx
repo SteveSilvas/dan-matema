@@ -1,10 +1,10 @@
 export default function Curriculum() {
     return (
-        <div className="text-center bg-white min-h-[80vh]" id="curriculo">
+        <div className="text-center bg-white min-h-screen text-[18px] md:text-[16px]" id="curriculo">
             <h1 className="text-4xl text-blue_d font-bold text-start px-4">
                 Conheça mais sobre Dan Matema
             </h1>
-            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 ">
+            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 md:mt-10">
                 <div className="flex-col max-w-[100%] m-4 animate-bounceIn">
                     <strong>Prestação de Serviços</strong>
                     <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%]">
@@ -33,7 +33,7 @@ export default function Curriculum() {
                         </li>
                     </ul>
                 </div>
-                <div className="flex-col max-w-[100%] m-4 animate-bounceIn">
+                <div className="flex-col max-w-[100%] m-4 animate-bounceIn ">
                     <strong>Empreendedorismo</strong>
                     <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%]">
                         <li className="text-start list-disc">

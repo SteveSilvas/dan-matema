@@ -52,6 +52,13 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                 </Link>
                 <Link
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
+                    href={"#depoimentos"}
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    Depoimentos
+                </Link>
+                <Link
+                    className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"#contato"}
                     onClick={() => setIsOpen(!isOpen)}
                 >

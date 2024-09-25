@@ -33,6 +33,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o conteúdo ocupe toda a tela */
+}
+
+main {
+  flex-grow: 1; /* Faz com que o main ocupe o espaço disponível */
+  background-color: #000; /* Cor de fundo preta */
 }
 
 @media (prefers-color-scheme: dark) {

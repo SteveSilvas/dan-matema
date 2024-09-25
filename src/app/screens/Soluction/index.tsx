@@ -9,38 +9,14 @@ import { RiSearchLine } from "react-icons/ri";
 
 export default function Solcution() {
     return (
-        <div className="text-start bg-white min-h-[80vh]" id="solucoes">
+        <div className="text-start bg-white min-h-screen" id="solucoes">
             <h1 className="text-4xl text-blue_d font-bold px-4">
                 Soluções Educacionais
             </h1>
 
-            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
-                <Card>
-                    <figure className="w-full h-[250px] flex items-center justify-center">
-                        <Image
-                            className="w-full h-full object-cover rounded-tr-3xl p-[1px]"
-                            src={materiais_pedagogicos}
-                            alt="Materiais pedagógicos"
-                            title="Materiais pedagógicos"
-                            priority
-                        />
-                    </figure>
-                    <div className="px-4 py-2 flex flex-col h-full items-center justify-between">
-                        <span>
-                            Materiais matemáticos, seleção do
-                            Dan Matema com condições exclusivas
-                        </span>
-                        <DefaultButton
-                            title="Saiba mais"
-                            to="https://danmatema.mmpmateriaismatematicos.com.br/"
-                            target="_blank">
-                            <RiSearchLine size={20} />
-                        </DefaultButton>
-                    </div>
-                </Card>
-
-                <Card>
-                    <figure className="w-full h-[250px] flex items-center justify-center">
+            <section className="mt-4 flex justify-center items-center p-4">
+                <Card className="w-[250px] shadow-lg">
+                    <figure className="w-[full] h-[250px] flex items-center justify-center">
                         <Image
                             className="w-full h-full object-cover rounded-tr-3xl p-[1px]"
                             src={alfabetizacao_matematica}
@@ -56,38 +32,13 @@ export default function Solcution() {
                         </span>
                         <DefaultButton
                             title="Saiba mais"
-                            to="https://curso.danmatema.com.br/"
-                            target="_blank">
+                            to="curso-alfabetizacao-matematica">
                             <RiSearchLine size={20} />
                         </DefaultButton>
                     </div>
                 </Card>
 
-                <Card>
-                    <figure className="w-full h-[250px] flex items-center justify-center">
-                        <Image
-                            className="w-full h-full object-cover rounded-tr-3xl p-[1px]"
-                            src={irium_educacao}
-                            alt="Projetos educacionais"
-                            title="Projetos educacionais"
-                            priority
-                        />
-                    </figure>
-                    <div className="px-4 py-2 flex flex-col h-full items-center justify-between">
-                        <span>
-                            Projetos Educacionais
-                        </span>
-                        <DefaultButton
-                            title="Saiba mais"
-                            to="https://www.irium.com.br/"
-                            target="_blank"
-                        >
-                            <RiSearchLine size={20} />
-                        </DefaultButton>
-                    </div>
-                </Card>
-
-                <Card>
+                <Card className="w-[250px] shadow-lg">
                     <figure className="w-full h-[250px] flex items-center justify-center">
                         <Image
                             className="w-full h-full object-cover rounded-tr-3xl"

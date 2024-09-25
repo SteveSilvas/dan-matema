@@ -12,15 +12,17 @@ const config: Config = {
         sans: ['var(--font-default)'],
       },
       colors: {
-        blue_d:"#26378d",
+        blue_d: "#26378d",
         yellow_d: "#FAAF01",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in-out",
-        slideInLeft: "slideInLeft 1s ease-out",
-        slideInRight: "slideInRight 1s ease-out",
+        slideInLeft: "slideInLeft 0.5s ease-out",
+        slideOutLeft: "slideOutLeft 0.5s ease-out",
+        slideInRight: "slideInRight 0.5s ease-out",
+        slideOutRight: "slideOutRight 0.5s ease-out",
         bounceIn: "bounceIn 0.75s ease-out",
       },
       keyframes: {
@@ -32,25 +34,23 @@ const config: Config = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        slideOutLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
         slideInRight: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        slideOutRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
+        },
         bounceIn: {
-          "0%, 100%": {
-            transform: "scale(0.8)",
-            // opacity: "0",
-          },
-          "50%": {
-            transform: "scale(1.05)",
-            opacity: "1",
-          },
-          "75%": {
-            transform: "scale(0.95)",
-          },
-          "100%": {
-            transform: "scale(1)",
-          },
+          "0%, 100%": { transform: "scale(0.8)" },
+          "50%": { transform: "scale(1.05)", opacity: "1" },
+          "75%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
         },
       },
     },

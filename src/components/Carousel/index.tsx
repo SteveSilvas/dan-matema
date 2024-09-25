@@ -40,7 +40,7 @@ const Carousel: React.FC<ICarousel> = ({ slidesDatas }) => {
   };
 
   const SlideContent = () => (
-    <div className="w-[100%] md:min-h-[392px] h-full relative flex justify-center items-center">
+    <div className="w-full flex justify-center items-center">
       {selectedItem && (
         <Image
           className={`w-full h-auto object-cover ${animationDirection}`}
@@ -53,21 +53,25 @@ const Carousel: React.FC<ICarousel> = ({ slidesDatas }) => {
   );
 
   return (
-    <div className="text-center bg-white overflow-hidden max-h-[392px] md:min-h-[392px] w-full relative group">
-      <IoIosArrowBack
-        className="cursor-pointer z-30 absolute top-1/2 -translate-y-1/2 left-2 text-4xl text-white hover:text-blue_d md:text-[3rem] md:hover:text-[3.1rem] transition-colors duration-300"
-        onClick={handlePrevSlide}
-      />
-      <IoIosArrowForward
-        className="cursor-pointer z-30 absolute top-1/2 -translate-y-1/2 right-2 text-4xl text-white hover:text-blue_d md:text-[3rem] md:hover:text-[3.1rem] transition-colors duration-300"
-        onClick={handleNextSlide}
-      />
+    <div className="text-center bg-white overflow-hidden max-h-[392px] md:min-h-[392px] w-full relative group flex flex-col items-center">
+      <div className="w-full flex justify-between items-center px-4">
+        <IoIosArrowBack
+          className="cursor-pointer text-4xl text-blue_d md:text-[3rem] hover:text-[3.1rem] transition-colors duration-300"
+          onClick={handlePrevSlide}
+        />
+        <div className="w-[90%] flex justify-center items-center">
+          <SlideContent />
+        </div>
+        <IoIosArrowForward
+          className="cursor-pointer text-4xl text-blue_d md:text-[3rem] hover:text-[3.1rem] transition-colors duration-300"
+          onClick={handleNextSlide}
+        />
+      </div>
       {selectedItem?.description && (
-        <span className="p-10 text-xl absolute bg-black h-full inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-20 pointer-events-none">
-          {selectedItem?.description}
-        </span>
+        <div className="p-4 text-white w-full text-center text-lg md:text-xl mt-2">
+          {selectedItem.description}
+        </div>
       )}
-      <SlideContent />
     </div>
   );
 };

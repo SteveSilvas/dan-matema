@@ -3,7 +3,7 @@ import { RiFacebookFill, RiInstagramFill, RiMailFill, RiPhoneFill, RiYoutubeFill
 
 const Header: React.FC = () => {
     return (
-        <section className="hidden md:flex bg-yellow_d top-0 w-[100%] mx-0 justify-around items-center p-1 text-xs">
+        <section className="hidden md:flex bg-yellow_d top-0 w-[100%] mx-0 justify-around items-center p-1 text-[18px] md:text-[16px]">
             <div className="flex justify-center items-center flex-1 gap-1">
                 <a
                     className="flex justify-center items-center text-[12px] hover:text-blue_d"
