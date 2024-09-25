@@ -2,7 +2,6 @@
 import React from 'react';
 import danMatemaLecionando from '@/assets/danmatema_lecionando.png';
 import professorDanilo from '@/assets/professor_danilo.png';
-import Image from "next/image";
 import Carousel, { Slide } from '@/components/Carousel';
 const CarrouselPage: React.FC = () => {
 

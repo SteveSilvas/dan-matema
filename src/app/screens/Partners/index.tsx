@@ -10,8 +10,7 @@ export interface IPartnerData {
 }
 
 const Partner: React.FC = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [animateDirection, setAnimateDirection] = useState('slideInRight');
+    const [animateDirection,] = useState('slideInRight');
 
     const partners: IPartnerData[] = [
         {
@@ -29,6 +28,7 @@ const Partner: React.FC = () => {
     const renderItems = () => {
         return partners.map((partner) => (
             <div
+                key={partner.empresa+partner.description}
                 className={`w-1/4 min-h-64 md:min-h-80 h-full text-[18px] md:text-[16px]bg-white shadow-lg rounded-lg p-4 transition-all duration-100 animate-${animateDirection}`}
             >
                 <Image
