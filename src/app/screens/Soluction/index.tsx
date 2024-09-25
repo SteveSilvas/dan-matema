@@ -1,7 +1,5 @@
 import Image from "next/image";
-import materiais_pedagogicos from "@/assets/soluctions/materiais_pedagogicos.png";
 import alfabetizacao_matematica from "@/assets/soluctions/alfabetizacao_matematica.png";
-import irium_educacao from "@/assets/soluctions/irium_educacao.png";
 import esq_educacao from "@/assets/soluctions/esq_educacao.png";
 import Card from "@/components/Card";
 import DefaultButton from "@/components/DefaultButton";
