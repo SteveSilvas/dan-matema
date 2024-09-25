@@ -42,7 +42,7 @@ const Testimony: React.FC = () => {
     const itemTemplate = (testimony: ITestimonyData) => {
         return (
             <div
-                className={`w-full min-h-64 md:min-h-80 h-full text-[18px] md:text-[16px]bg-white shadow-lg rounded-lg p-4 transition-all duration-100 animate-${animateDirection}`}
+                className={`w-full min-h-64 md:min-h-80 h-full text-[18px] md:text-[16px] bg-white shadow-lg rounded-lg p-4 transition-all duration-100 animate-${animateDirection}`}
             >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 mt-4">{testimony.title}</h5>
                 <p className="font-normal text-gray-700 mt-2">{testimony.description}</p>
