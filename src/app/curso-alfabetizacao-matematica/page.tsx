@@ -7,10 +7,9 @@ import RegisterForm from './RegisterForm';
 
 const CursoAlfabetizacaoMatematica: React.FC = () => {
   const [, setToast] = useAtom(toastContext);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [name, ] = useState("");
+  const [email, ] = useState("");
+  const [message, ] = useState("");
   const handleSendRegistration = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -55,7 +54,7 @@ const CursoAlfabetizacaoMatematica: React.FC = () => {
             Seu filho se depara com dificuldades em matemática?
           </strong>
           <p className='text-gray-900 mt-4'>
-            No curso "Alfabetização Matemática",
+            No curso Alfabetização Matemática,
             seus filhos embarcam em uma jornada pelo mundo dos números,
             desvendando seus segredos de forma lúdica e envolvente</p>
         </div>

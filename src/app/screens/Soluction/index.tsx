@@ -2,7 +2,6 @@ import Image, { StaticImageData } from "next/image";
 import alfabetizacao_matematica from "@/assets/soluctions/alfabetizacao_matematica.png";
 import esq_educacao from "@/assets/soluctions/esq_educacao.png";
 import aulas_gratuitas from "@/assets/soluctions/aulas_gratuitas.png";
-import Card from "@/components/Card";
 import DefaultButton from "@/components/DefaultButton";
 import { RiSearchLine } from "react-icons/ri";
 export interface ISoluctionCard {
