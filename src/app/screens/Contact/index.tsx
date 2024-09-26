@@ -44,9 +44,9 @@ export default function Contact() {
 
     return (
         <div className="text-center bg-white min-h-[80vh] grid grid-cols-1 sm:grid-cols-2" id="contato">
-            <figure className="flex w-full justify-center">
+            <figure className="flex w-auto h-[80vh] justify-center py-10 overflow-hidden">
                 <Image
-                    className="w-full h-auto md:w-full md:h-auto object-cover"
+                    className="w-auto h-full md:w-auto object-cover"
                     src={danmatema_contact}
                     alt="Fotografia do professor Danilo Souza"
                     title="Fotografia do professor Danilo Souza"

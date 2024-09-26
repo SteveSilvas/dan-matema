@@ -23,7 +23,7 @@ async function sendEmail(mailData: IMailSendMailData): Promise<ISendMailResult> 
 
         return {
             success: true,
-            message: "Email enviado com sucesso. Aguarde meu contato."
+            message: "Inscrição realizada com sucesso. Entraremos em contato para realizar a matrícula."
         };
     } catch (e) {
         console.error(e);

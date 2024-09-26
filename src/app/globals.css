@@ -5,10 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --orange-1:  #FAB001;
-  --orange-2:  #D6970A;
-  --red-1:  #C87350;
-  --orange-1:  #C87350;
+  --orange-1: #FAB001;
+  --orange-2: #D6970A;
+  --red-1: #C87350;
+  --orange-1: #C87350;
 
   ::-webkit-scrollbar {
     width: 8px;
@@ -36,12 +36,12 @@ body {
 
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Garante que o conteúdo ocupe toda a tela */
+  min-height: 100vh;
 }
 
 main {
-  flex-grow: 1; /* Faz com que o main ocupe o espaço disponível */
-  background-color: #000; /* Cor de fundo preta */
+  flex-grow: 1;
+  background-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

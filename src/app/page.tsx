@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-white">
-        <section className="flex justify-center items-center ">
+        <section className="flex justify-center items-center h-1/2 md:h-auto">
           <strong className="px-3 text-4xl md:text-7xl text-left text-blue_d animate-slideInLeft transition-all">
             Professor Danilo Souza
           </strong>
