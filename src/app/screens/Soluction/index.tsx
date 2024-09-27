@@ -77,6 +77,14 @@ export default function Solcution() {
                     description="Playlist de aulas gratuitas"
                     target="_blank"
                 />
+                 <SoluctionCard
+                    title="Acompanhamento escolar/aula particular"
+                    to="http://eoesquema.com/aula-particular/"
+                    src={aulas_gratuitas}
+                    alt="Acompanhamento escolar/aula particular"
+                    description="Acompanhamento escolar/aula particular"
+                    target="_blank"
+                />
             </section>
         </div>
     );

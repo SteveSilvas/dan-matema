@@ -1,15 +1,16 @@
 "use client";
 import Image from "next/image";
 import danmatema_contact from "@/assets/danmatema_contact.png";
-import sendEmail from "@/services/SendEmailService";
 import { useState } from "react";
 import { useAtom } from "jotai";
 import toastContext from "@/context/ToastAtom";
 import ContactBar from "@/components/ContactBar";
+import { sendEmailContact } from "@/services/SendEmailService";
 
 export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
     const [, setToast] = useAtom(toastContext);
 
@@ -19,9 +20,10 @@ export default function Contact() {
         if (!isValidateFields())
             return;
 
-        const emailSended = await sendEmail({
+        const emailSended = await sendEmailContact({
             fromName: name,
             fromEmail: email,
+            phone: phone,
             message: message
         })
 
@@ -32,7 +34,7 @@ export default function Contact() {
     }
 
     const isValidateFields = () => {
-        if (!name || !email || !message) {
+        if (!name || !phone || !email || !message) {
             setToast({
                 isOpen: true,
                 text: "Preencha todos os campos."
@@ -60,7 +62,7 @@ export default function Contact() {
                 <p className="text-xl text-gray-800  p-4">
                     Entre em contato para desenvolvermos soluções juntos e me acompanhe nas redes sociais:
                 </p>
-               <ContactBar/>
+                <ContactBar />
 
                 <form
                     className="flex flex-col items-center w-full gap-4"
@@ -82,6 +84,18 @@ export default function Contact() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="bg-gray-200 p-2 rounded-md w-3/4"
+                    />
+                    <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="WhatsApp"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="bg-gray-200 p-2 rounded-md w-3/4"
+                        pattern="\+?[0-9\s\-\(\)]{7,15}"
+                        inputMode="tel"
+                        title="Por favor, insira um número de telefone válido."
                     />
                     <textarea
                         name="message"

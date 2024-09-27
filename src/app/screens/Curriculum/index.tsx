@@ -17,6 +17,12 @@ export default function Curriculum() {
                         <li className="text-start list-disc">
                             Consultor matemática em escolas e empresas de materiais didáticos
                         </li>
+                        <li className="text-start list-disc">
+                            Experiência lecionando em colégios particulares
+                        </li>
+                        <li className="text-start list-disc">
+                            Atuação no terceiro setor
+                        </li>
                     </ul>
                 </div>
                 <div className="flex-col max-w-[100%] m-4 animate-bounceIn">
@@ -27,6 +33,9 @@ export default function Curriculum() {
                         </li>
                         <li className="text-start list-disc">
                             Lançou cursos online do universo    matemático
+                        </li>
+                        <li className="text-start list-disc">
+                            Produção de planilhas automatizadas para rotina e gestão escolar
                         </li>
                         <li className="text-start list-disc">
                             Criou um laboratório virtual de ensino

@@ -33,7 +33,7 @@ export default function RootLayout({
           isOpen: false,
           text: ''
         });
-      }, 4000);
+      }, 5000);
     }
   }, [toast, setToast]);
 

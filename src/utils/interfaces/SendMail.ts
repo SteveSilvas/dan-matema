@@ -6,5 +6,6 @@ export interface ISendMailResult{
 export interface IMailSendMailData{
     fromName: string;
     fromEmail: string;
+    phone: string;
     message: string;
 }

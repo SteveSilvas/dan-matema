@@ -2,18 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
-    const { fromName, fromEmail, message } = await request.json();
+    const { fromName, fromEmail, phone, studantName, studantCicle } = await request.json();
 
-    if (!fromName || !fromEmail || !message) {
+    if (!fromName || !fromEmail || !studantName || !studantCicle) {
         return NextResponse.json({ error: "Missing fields!" }, { status: 400 });
     }
 
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 587,
-        secure: false, 
+        secure: false,
         auth: {
-            user: "steve.evets00@gmail.com", 
+            user: "steve.evets00@gmail.com",
             pass: process.env.SMTP_USER,
         },
         tls: {
@@ -25,12 +25,10 @@ export async function POST(request: NextRequest) {
         const mailSent = await transporter.sendMail({
             from: `${fromEmail} <${fromEmail}>`,
             to: ["steve.evets00@gmail.com"],
-            subject: "Contato pelo site Dan Matema",
-            text: "Contato pelo site Dan Matema",
+            subject: "Inscricão em curso pelo site Dan Matema",
+            text: `Nome: ${fromName}\nEmail: ${fromEmail}\nTelefone: ${phone}\nEstudante: ${studantName}\nCiclo: ${studantCicle}`,
             date: new Date(),
-            sender: `${fromName} <${fromEmail}>`,
-            inReplyTo: fromEmail,
-            html: "<p style='font-family: sans-serif; font-size: 16px; '>" + fromName + " (" + fromEmail + ")</p><p style='font-family: sans-serif; font-size: 16px;'>" + message + "</p>",
+            sender: fromEmail,
         });
 
         if (!mailSent) {
