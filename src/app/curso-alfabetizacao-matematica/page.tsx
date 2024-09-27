@@ -1,8 +1,5 @@
 "use client";
-import toastContext from '@/context/ToastAtom';
-import { sendEmailRegister } from '@/services/SendEmailService';
-import { useAtom } from 'jotai';
-import React, { useState } from 'react';
+import React from 'react';
 import RegisterForm from './RegisterForm';
 import Presentation from './Presentation';
 import Public from './Public';
@@ -20,6 +17,6 @@ const CursoAlfabetizacaoMatematica: React.FC = () => {
       <RegisterForm />
     </div>
   )
-}
+};
 
 export default CursoAlfabetizacaoMatematica;
