@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     try {
         const mailSent = await TransportGmail.sendMail({
             from: addressContact,
-            to: ["profdanmatema@gmail.com"],
+            to: ["profdanmatema@gmail.com","steve.evets00@gmail.com","irenita.f.lopes@gmail.com"],
             subject: "Contato pelo site Dan Matema",
             text: `Nome: ${fromName}\nEmail: ${fromEmail}\nTelefone: ${phone}\nMensagem: ${message}`,
             date: new Date(),
