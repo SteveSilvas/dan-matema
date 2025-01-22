@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RiFacebookFill, RiInstagramFill, RiMailFill, RiPhoneFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
+import { RiFacebookFill, RiInstagramFill, RiMailFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
 const Header: React.FC = () => {
     return (
