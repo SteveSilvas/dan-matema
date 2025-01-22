@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RiFacebookFill, RiInstagramFill, RiMailFill, RiPhoneFill, RiYoutubeFill } from "react-icons/ri";
+import { RiFacebookFill, RiInstagramFill, RiMailFill, RiPhoneFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
 const Header: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ const Header: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <RiPhoneFill className="text-xl hover:text-blue_d" />
+                    <RiWhatsappFill className="text-xl hover:text-blue_d" />
                     +55 (11) 94793-4827
                 </a>
                 <a
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
                     className="flex justify-center items-center text-[12px]"
                     href={"https://www.instagram.com/danmatema/"}
                     target="_blank">
-                    <RiInstagramFill className="text-xl hover:text-blue_d"/>
+                    <RiInstagramFill className="text-xl hover:text-blue_d" />
                 </Link>
                 <Link
                     title="Facebook"

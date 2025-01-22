@@ -27,7 +27,7 @@ export const sendGmail = async (content: ISendGmailContent) => {
         name: content.fromName
     };
     const addressToSend: Mail.Address = {
-        address: process.env.SMTP_USER ?? "steve.evets00@gmail.com",
+        address: process.env.SMTP_USER ?? "profdanmatema@gmail.com",
         name: content.fromName
     };
 

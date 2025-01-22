@@ -1,7 +1,5 @@
-import { sendGmail, TransportGmail } from "@/app/api/services/Nodemailer/Nodemailer";
+import { sendGmail } from "@/app/api/services/Nodemailer/Nodemailer";
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
     const { fromName, fromEmail, phone, studantName, studantCicle } = await request.json();
