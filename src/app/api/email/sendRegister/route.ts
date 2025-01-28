@@ -1,39 +1,51 @@
-import { sendGmail } from "@/app/api/services/Nodemailer/Nodemailer";
-import { NextRequest, NextResponse } from "next/server";
+// import { NextRequest, NextResponse } from "next/server";
+// import nodemailer from "nodemailer";
 
-export async function POST(request: NextRequest) {
-    const { fromName, fromEmail, phone, studantName, studantCicle } = await request.json();
+// export async function POST(request: NextRequest) {
+//     const { fromName, fromEmail, phone, message } = await request.json();
 
-    if (!fromName || !fromEmail || !studantName || !studantCicle) {
-        return NextResponse.json({ error: "Missing fields!" }, { status: 400 });
-    }
+//     if (!fromName || !fromEmail || !message) {
+//         return NextResponse.json({ error: "Missing fields!" }, { status: 400 });
+//     }
 
-    const textToSend = `Nome: ${fromName}\nEmail: ${fromEmail}\nTelefone: ${phone}\nEstudante: ${studantName}\nCiclo: ${studantCicle}`;
-    
-    try {
-        const mailSent = sendGmail({
-            content:textToSend,
-            subject: "Inscrição para curso DanMatema",
-            fromMail: fromEmail,
-            fromName:fromName
-        });
+//     const transporter = nodemailer.createTransport({
+//         host: "smtp.gmail.com",
+//         port: 587,
+//         secure: false,
+//         auth: {
+//             user: "steve.evets00@gmail.com",
+//             pass: process.env.SMTP_USER,
+//         },
+//         tls: {
+//             rejectUnauthorized: false,
+//         },
+//     });
 
-        if (!mailSent) {
-            return NextResponse.json({
-                success: false,
-                message: "Falha ao enviar e-mail, tente novamente mais tarde.",
-            });
-        }
-        return NextResponse.json({
-            success: true,
-            message: "Email enviado com sucesso",
-        });
+//     try {
+//         const mailSent = await transporter.sendMail({
+//             from: `${fromEmail} <${fromEmail}>`,
+//             to: ["steve.evets00@gmail.com", "profdanmatema@gmail.com", "irenita.f.lopes@gmail.com"],
+//             text: `Nome: ${fromName}\nEmail: ${fromEmail}\nTelefone: ${phone}\nMensagem: ${message}`,
+//             date: new Date(),
+//             sender: fromEmail,
+//         });
 
-    } catch (error) {
-        console.error(error);
-        return NextResponse.json({
-            success: false,
-            message: "Falha ao enviar e-mail, tente novamente mais tarde.",
-        });
-    }
-}
+//         if (!mailSent) {
+//             return NextResponse.json({
+//                 success: false,
+//                 message: "Falha ao enviar e-mail, tente novamente mais tarde.",
+//             });
+//         }
+//         return NextResponse.json({
+//             success: true,
+//             message: "Email enviado com sucesso",
+//         });
+
+//     } catch (error) {
+//         console.error(error);
+//         return NextResponse.json({
+//             success: false,
+//             message: "Falha ao enviar e-mail, tente novamente mais tarde.",
+//         });
+//     }
+// }
