@@ -1,6 +1,5 @@
-import { TransportGmail } from "@/app/api/services/Nodemailer/Nodemailer";
 import { NextRequest, NextResponse } from "next/server";
-import Mail from "nodemailer/lib/mailer";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
     const { fromName, fromEmail, phone, message } = await request.json();
@@ -9,15 +8,23 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: "Missing fields!" }, { status: 400 });
     }
 
-    const addressContact: Mail.Address = {
-        address: fromEmail,
-        name: fromName
-    }
+    const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+            user: "steve.evets00@gmail.com",
+            pass: process.env.SMTP_USER,
+        },
+        tls: {
+            rejectUnauthorized: false,
+        },
+    });
 
     try {
-        const mailSent = await TransportGmail.sendMail({
-            from: addressContact,
-            to: ["profdanmatema@gmail.com","steve.evets00@gmail.com","irenita.f.lopes@gmail.com"],
+        const mailSent = await transporter.sendMail({
+            from: `${fromEmail} <${fromEmail}>`,
+            to: ["danmatema.souza@gmail.com", "profdanmatema@gmail.com"],    
             subject: "Contato pelo site Dan Matema",
             text: `Nome: ${fromName}\nEmail: ${fromEmail}\nTelefone: ${phone}\nMensagem: ${message}`,
             date: new Date(),
