@@ -1,7 +1,7 @@
 
 export default function About() {
     return (
-        <div className="px-4 py-10 text-xl text-left bg-white min-h-screen w-[100%] flex flex-col md:flex-row" id="biografia">
+        <div className="px-4 py-10 text-xl text-left bg-white min-h-[50vh] w-[100%] flex flex-col md:flex-row" id="biografia">
             <div className="min-w-[40%] flex flex-col justify-center py-1/2">
                 <h1 className="text-4xl text-blue_d font-bold">
                     Os <strong className="text-4xl text-yellow_d font-bold">números</strong> que
