@@ -12,13 +12,8 @@ import ContactButton from "@/components/ContactButton";
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-white">
-        <section className="flex justify-center items-center h-1/2 md:h-auto">
-          <strong className="px-3 text-4xl md:text-7xl text-left text-blue_d animate-slideInLeft transition-all">
-            Professor Danilo Souza
-          </strong>
-        </section>
-        <figure className="flex justify-center  animate-slideInRight">
+      <div className="min-h-screen flex flex-col md:flex-row-reverse bg-white">
+        <figure className="flex justify-center w-full md:w-1/2 animate-slideInRight">
           <Image
             className="h-[75%] w-auto"
             src={danmatema_home}
@@ -27,14 +22,22 @@ export default function Home() {
             priority
           />
         </figure>
+        <section className="flex flex-col justify-center items-center h-1/2 md:h-auto">
+          <strong className="px-3 text-4xl md:text-7xl text-left text-blue_d animate-slideInLeft transition-all">
+            Professor Danilo Souza
+          </strong>
+          <p className="px-3 text-2xl md:text-4xl text-left text-gray-700 animate-slideInLeft transition-all">
+            Transforme a Matemática no Maior Aliado do Seu Filho!
+          </p>
+        </section>
       </div>
-      <ContactButton/>
+      <ContactButton />
       <CarrouselPage />
       <About />
       <Curriculum />
       <Testimony />
       <Solcution />
-      <Partner/>
+      <Partner />
       <Contact />
     </>
   );
