@@ -27,7 +27,7 @@ const DefaultButton: React.FC<IDefaultButton> = ({
             onClick={onClick}
             href={to}
             hidden={disabled}
-            className={`bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded-xl ${className}`} type={type}>
+            className={className ?? "bg-yellow_d hover:bg-yellow_d text-white font-bold py-2 px-4 rounded-xl"} type={type}>
             <div className="flex items-center justify-center">
                 {children}
                 {title}

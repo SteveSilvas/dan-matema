@@ -8,6 +8,7 @@ import Solcution from "./screens/Soluction";
 import Contact from "./screens/Contact";
 import Testimony from "./screens/Testimony";
 import Partner from "./screens/Partners";
+import ContactButton from "@/components/ContactButton";
 export default function Home() {
   return (
     <>
@@ -27,6 +28,7 @@ export default function Home() {
           />
         </figure>
       </div>
+      <ContactButton/>
       <CarrouselPage />
       <About />
       <Curriculum />
