@@ -2,7 +2,10 @@ export default function Curriculum() {
     return (
         <div className="text-center bg-white min-h-screen text-[18px] md:text-[16px]" id="curriculo">
             <h1 className="text-4xl text-blue_d font-bold text-start px-4">
-                Conheça mais sobre Dan Matema
+                Conheça mais sobre
+                <strong className="text-4xl text-yellow_d font-bold mx-2">
+                    Dan Matema
+                </strong>
             </h1>
             <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 md:mt-10">
                 <div className="flex-col max-w-[100%] m-4 animate-bounceIn">
