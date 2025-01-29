@@ -26,9 +26,6 @@ export default function Home() {
           <strong className="px-3 text-4xl md:text-7xl text-left text-blue_d animate-slideInLeft transition-all">
             Professor Danilo Souza
           </strong>
-          <p className="px-3 text-2xl md:text-4xl text-left text-gray-700 animate-slideInLeft transition-all">
-            Transforme a Matemática no Maior Aliado do Seu Filho!
-          </p>
         </section>
       </div>
       <ContactButton />
