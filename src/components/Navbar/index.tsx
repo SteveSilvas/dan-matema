@@ -38,17 +38,17 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                 </Link>
                 <Link
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
-                    href={"/#curriculo"}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    Currículo
-                </Link>
-                <Link
-                    className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#solucoes"}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     Soluções
+                </Link>
+                <Link
+                    className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
+                    href={"/#curriculo"}
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    Conheça mais
                 </Link>
                 <Link
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
