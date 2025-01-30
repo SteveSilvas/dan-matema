@@ -83,7 +83,7 @@ const Partner: React.FC = () => {
 
     return (
         <div id="parceiros" className="bg-white w-full h-full min-h-screen py-10">
-            <h2 className="text-left px-4 text-4xl font-bold text-blue_d mb-8">Parceiros</h2>
+            <h2 className="text-left px-4 text-4xl font-bold text-blue_d mb-8">Quem confia no Danilo</h2>
             <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center p-4 w-full mx-auto">
                 {renderItems()}
             </div>
