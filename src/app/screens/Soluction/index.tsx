@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import alfabetizacao_matematica from "@/assets/soluctions/alfabetizacao_matematica.png";
-import esq_educacao from "@/assets/soluctions/esq_educacao.png";
+import esq_educacao from "@/assets/soluctions/esq.jpg";
+import materiais_pedagogicos from "@/assets/soluctions/materiais_pedagogicos.png";
 import aulas_gratuitas from "@/assets/soluctions/aulas_gratuitas.png";
+import danmatema_lecionando from "@/assets/danmatema_lecionando.png";
 import DefaultButton from "@/components/DefaultButton";
 import { RiSearchLine } from "react-icons/ri";
 export interface ISoluctionCard {
@@ -39,7 +41,9 @@ export default function Solcution() {
                     <DefaultButton
                         title="Saiba mais"
                         target={target}
-                        to={to}>
+                        to={to}
+                        className='bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded-xl'
+                    >
                         <RiSearchLine size={20} />
                     </DefaultButton>
                 </div>
@@ -55,6 +59,22 @@ export default function Solcution() {
 
             <section className="mt-4 flex flex-col md:flex-row justify-center items-center p-4 gap-4">
                 <SoluctionCard
+                    title="Acompanhamento escolar/aula particular"
+                    to="https://aulas.universodanmatema.com.br/"
+                    src={danmatema_lecionando}
+                    alt="Acompanhamento escolar/aula particular"
+                    description="Acompanhamento escolar/aula particular"
+                    target="_blank"
+                />
+                <SoluctionCard
+                    title="Curadoria de jogos matemáticos"
+                    to="https://danmatema.mmpmateriaismatematicos.com.br/"
+                    src={materiais_pedagogicos}
+                    alt="Loja de jogos matemáticos"
+                    description="Loja online de jogos educativos com foco em matemática e raciocinio lógico"
+                    target="_blank"
+                />
+                <SoluctionCard
                     title="Alfabetacao Matematica"
                     to="curso-alfabetizacao-matematica"
                     src={alfabetizacao_matematica}
@@ -63,7 +83,7 @@ export default function Solcution() {
                 />
                 <SoluctionCard
                     title="ESQ educação"
-                    to="https://eoesquema.com/"
+                    to="https://naducandeiasitapevisp.my.canva.site/esq"
                     src={esq_educacao}
                     alt="ESQ educação"
                     description="Hub de Produtos Educacionais"
@@ -71,18 +91,10 @@ export default function Solcution() {
                 />
                 <SoluctionCard
                     title="Canal do youtube"
-                    to="https://www.youtube.com/watch?v=hqeKPvTwfkU&list=PLbyU8QzGbC2XaeCzX1HXvxtZ8FTAe5qeE"
+                    to="https://www.youtube.com/c/%C3%89oesquema"
                     src={aulas_gratuitas}
                     alt="Canal do youtube"
                     description="Playlist de aulas gratuitas"
-                    target="_blank"
-                />
-                 <SoluctionCard
-                    title="Acompanhamento escolar/aula particular"
-                    to="http://eoesquema.com/aula-particular/"
-                    src={aulas_gratuitas}
-                    alt="Acompanhamento escolar/aula particular"
-                    description="Acompanhamento escolar/aula particular"
                     target="_blank"
                 />
             </section>

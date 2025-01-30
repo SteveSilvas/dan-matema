@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import materiais_pedagogicos from "@/assets/soluctions/materiais_pedagogicos.png";
 import irium_educacao from "@/assets/soluctions/irium_educacao.png";
 import facilita_vestibulares from "@/assets/partners/facilita_vestibulares.jpeg";
 import Image from 'next/image';
@@ -14,16 +13,6 @@ const Partner: React.FC = () => {
     const [animateDirection,] = useState('slideInRight');
 
     const partners: IPartnerData[] = [
-        {
-            empresa: 'MMP',
-            src: materiais_pedagogicos,
-            description: 'Materiais matemáticos, seleção do Dan Matema com condições exclusivas',
-        },
-        {
-            empresa: 'IRIUM',
-            src: irium_educacao,
-            description: 'Projetos Educacionais'
-        },
         {
             empresa: 'Facilita Vestibulares',
             src: facilita_vestibulares,

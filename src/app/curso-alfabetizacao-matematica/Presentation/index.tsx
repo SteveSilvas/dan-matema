@@ -2,7 +2,7 @@ import React from 'react';
 
 const Presentation: React.FC = () => {
     return (
-        <section className='w-screen min-h-[70vh] flex flex-col md:flex-row'>
+        <section className='w-screen min-h-full flex flex-col md:flex-row'>
             <div className='h-full flex-1 p-4 flex-col'>
                 <h1 className='text-4xl text-blue_d font-bold'>Curso de Alfabetização Matemática</h1>
 

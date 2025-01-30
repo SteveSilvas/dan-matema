@@ -4,7 +4,7 @@ import danmatema_home from "../assets/danmatema_home.png";
 import CarrouselPage from "./screens/CarrouselPage";
 import About from "./screens/About";
 import Curriculum from "./screens/Curriculum";
-import Solcution from "./screens/Soluction";
+import Soluction from "./screens/Soluction";
 import Contact from "./screens/Contact";
 import Testimony from "./screens/Testimony";
 import Partner from "./screens/Partners";
@@ -29,11 +29,11 @@ export default function Home() {
         </section>
       </div>
       <ContactButton />
-      <CarrouselPage />
       <About />
+      <CarrouselPage />
+      <Soluction />
       <Curriculum />
       <Testimony />
-      <Solcution />
       <Partner />
       <Contact />
     </>
