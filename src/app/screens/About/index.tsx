@@ -17,7 +17,7 @@ export default function About() {
                 <p className="text-justify md:p-4 md:py-0  min-w-[50%] text-[18px] md:text-[16px]">
                     Nascido e criado na zona oeste de São Paulo, Danilo sempre foi um entusiasta dos
                     conhecimentos científicos e um autodidata nato, agora ele dedica-se à apresentar
-                    esse universo a estudantes de diversas faixas etárias, além de fortalecer mais de 50
+                    esse universo a estudantes de diversas faixas etárias, além de fortalecer dezenas de
                     unidades escolares com seu trabalho de consultorias.
                 </p>
             </div>
