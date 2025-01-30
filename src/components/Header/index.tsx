@@ -4,9 +4,9 @@ import { RiFacebookFill, RiInstagramFill, RiMailFill, RiWhatsappFill, RiYoutubeF
 const Header: React.FC = () => {
     return (
         <section className="hidden md:flex bg-yellow_d top-0 w-[100%] mx-0 justify-around items-center p-1 text-[18px] md:text-[16px]">
-            <div className="flex justify-center items-center flex-1 gap-1">
+            <div className="flex justify-center items-center flex-1 gap-4">
                 <a
-                    className="flex justify-center items-center text-[12px] hover:text-blue_d"
+                    className="flex justify-center items-center text-[12px] hover:text-blue_d gap-1"
                     href="https://wa.me/5511947934827"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
                     +55 (11) 94793-4827
                 </a>
                 <a
-                    className="flex justify-center items-center text-[12px] hover:text-blue_d"
+                    className="flex justify-center items-center text-[12px] hover:text-blue_d gap-1"
                     href="mailto:profdanmatema@gmail.com">
                     <RiMailFill className="text-xl hover:text-blue_d" />
                     profdanmatema@gmail.com
