@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import companyLogo from "../../assets/Capa-Linkedin__2_-removebg-preview.png"; // Substitua pelo caminho correto do logo
+import companyLogo from "../../assets/logo_infotecdevs_transparente.png";
 
 const CompanyLink: React.FC = () => {
     return (

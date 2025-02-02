@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import alfabetizacao_matematica from "@/assets/soluctions/alfabetizacao_matematica.png";
-import esq_educacao from "@/assets/soluctions/esq.jpg";
+import esq_educacao from "@/assets/soluctions/esq.png";
 import materiais_pedagogicos from "@/assets/soluctions/materiais_pedagogicos.png";
 import aulas_gratuitas from "@/assets/soluctions/aulas_gratuitas.png";
 import danmatema_lecionando from "@/assets/danmatema_lecionando.png";
