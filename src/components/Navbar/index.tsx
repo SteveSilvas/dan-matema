@@ -23,6 +23,7 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
             </div>
             <nav className="w-[100%] h-[100%] text-[18px] md:h-auto flex flex-col md:flex-row align-center items-center justify-center md:justify-end gap-10">
                 <Link
+                    title="Inicio"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/"}
                     onClick={() => setIsOpen(!isOpen)}
@@ -30,6 +31,7 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                     Inicio
                 </Link>
                 <Link
+                    title="Biografia"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#biografia"}
                     onClick={() => setIsOpen(!isOpen)}
@@ -37,6 +39,7 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                     Biografia
                 </Link>
                 <Link
+                    title="Soluções"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#solucoes"}
                     onClick={() => setIsOpen(!isOpen)}
@@ -44,6 +47,7 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                     Soluções
                 </Link>
                 <Link
+                    title="Conheça mais"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#curriculo"}
                     onClick={() => setIsOpen(!isOpen)}
@@ -51,6 +55,7 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                     Conheça mais
                 </Link>
                 <Link
+                    title="Depoimentos"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#depoimentos"}
                     onClick={() => setIsOpen(!isOpen)}
@@ -58,6 +63,7 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                     Depoimentos
                 </Link>
                 <Link
+                    title="Parceiros"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#parceiros"}
                     onClick={() => setIsOpen(!isOpen)}
@@ -65,11 +71,12 @@ const Navbar: React.FC<INavbarProps> = ({ isOpen, toggleSidebar, setIsOpen }) =>
                     Parceiros
                 </Link>
                 <Link
+                    title="Contatos"
                     className={`hover:text-blue_d font-bold font-default ${!isOpen ? "hidden md:block" : ""}`}
                     href={"/#contato"}
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    Contato
+                    Contatos
                 </Link>
             </nav>
         </div>
