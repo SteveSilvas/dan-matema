@@ -21,14 +21,7 @@ const Content: React.FC = () => {
                     <li><strong>Motivação e engajamento:</strong> Uma abordagem divertida que mantém os alunos interessados.</li>
                     <li><strong>Preparação para o futuro:</strong> Habilidades matemáticas essenciais para o sucesso na escola e na vida.</li>
                 </ul>
-
-                <div className="mt-8 p-6 bg-blue-100 rounded-md">
-                    <p className="text-xl font-semibold text-blue_d">Inscrições abertas!</p>
-                    <p className="text-lg text-gray-800">Vagas limitadas!</p>
-                    <p className="text-lg text-gray-800 font-bold mt-4">Garanta a vaga do seu filho agora mesmo!</p>
-                </div>
             </div>
-
         </section>
     );
 }
