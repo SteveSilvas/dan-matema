@@ -35,7 +35,7 @@ export default function Solcution() {
                     />
                 </figure>
                 <div className="px-4 py-2 flex flex-col items-center justify-between flex-grow">
-                    <span className="text-center">
+                    <span className="text-center text-gray-700">
                         {description}
                     </span>
                     <DefaultButton

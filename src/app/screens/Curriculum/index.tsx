@@ -9,8 +9,8 @@ export default function Curriculum() {
             </h1>
             <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 md:mt-10">
                 <div className="flex-col max-w-[100%] m-4 animate-bounceIn">
-                    <strong>Prestação de Serviços</strong>
-                    <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%]">
+                    <strong className="text-gray-700">Prestação de Serviços</strong>
+                    <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%] text-gray-700">
                         <li className="text-start list-disc">
                             Foi professor da rede estadual de educação por 10 anos
                         </li>
@@ -29,8 +29,8 @@ export default function Curriculum() {
                     </ul>
                 </div>
                 <div className="flex-col max-w-[100%] m-4 animate-bounceIn">
-                    <strong>Produção de material</strong>
-                    <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%]">
+                    <strong className="text-gray-700">Produção de material</strong>
+                    <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%] text-gray-700">
                         <li className="text-start list-disc">
                             Produziu e-book de atividades para educadores
                         </li>
@@ -46,8 +46,8 @@ export default function Curriculum() {
                     </ul>
                 </div>
                 <div className="flex-col max-w-[100%] m-4 animate-bounceIn ">
-                    <strong>Empreendedorismo</strong>
-                    <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%]">
+                    <strong className="text-gray-700">Empreendedorismo</strong>
+                    <ul className="p-4 border-b-8 border-gray-300 md:min-h-[100%] text-gray-700">
                         <li className="text-start list-disc">
                             Possui o Hub de soluções educacionais, ESQ Educação
                         </li>

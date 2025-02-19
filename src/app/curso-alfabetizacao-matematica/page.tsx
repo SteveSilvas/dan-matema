@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import RegisterForm from './RegisterForm';
 import Presentation from './Presentation';
 import Public from './Public';
 import Content from './Content';
@@ -8,6 +7,7 @@ import Plain from './Plain';
 import Address from './Address';
 import Differences from './Differences';
 import Flyer from './Flyer';
+import RegisterFormGoogleForms from './RegisterFormGoogleForms';
 
 const CursoAlfabetizacaoMatematica: React.FC = () => {
 
@@ -20,7 +20,7 @@ const CursoAlfabetizacaoMatematica: React.FC = () => {
       <Differences />
       <Flyer />
       <Plain />
-      <RegisterForm />
+      <RegisterFormGoogleForms />
     </div>
   )
 };

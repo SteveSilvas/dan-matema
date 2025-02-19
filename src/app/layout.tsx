@@ -49,19 +49,17 @@ export default function RootLayout({
       </head>
       <body className={`${openSans.variable} font-sans flex flex-col min-h-screen`}>
         <header className="w-full fixed top-0 left-0 z-50">
-          <div className="fixed w-full">
-            <div className="fixed z-50 right-0">
-              {toast.isOpen && <ToastComponent text={toast.text} />}
-            </div>
-            <Header />
-            <Navbar
-              isOpen={isOpen}
-              toggleSidebar={() => toggleSidebar()}
-              setIsOpen={setIsOpen}
-            />
+          <div className="fixed z-50 right-0">
+            {toast.isOpen && <ToastComponent text={toast.text} />}
           </div>
+          <Header />
+          <Navbar
+            isOpen={isOpen}
+            toggleSidebar={() => toggleSidebar()}
+            setIsOpen={setIsOpen}
+          />
         </header>
-        <main className="flex-grow w-full mt-[100px]">
+        <main className="flex-grow w-full mt-[90px]">
           {children}
         </main>
         <Footer />

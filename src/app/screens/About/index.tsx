@@ -9,12 +9,12 @@ export default function About() {
                 </h1>
             </div>
             <div className="min-w-[50%] flex flex-col gap-4 leading-6 justify-center">
-                <p className="text-justify py-4 md:p-4 md:py-0  min-w-[50%] text-[18px] md:text-[16px]">
+                <p className="text-justify py-4 md:p-4 md:py-0  min-w-[50%] text-[18px] md:text-[16px] text-gray-700">
                     Danilo Souza, popularmente conhecido como Dan Matema é pesquisador, professor
                     com formação em matemática, especialista em tecnologias educacionais e
                     empreendedor.
                 </p>
-                <p className="text-justify md:p-4 md:py-0  min-w-[50%] text-[18px] md:text-[16px]">
+                <p className="text-justify md:p-4 md:py-0  min-w-[50%] text-[18px] md:text-[16px] text-gray-700">
                     Nascido e criado na zona oeste de São Paulo, Danilo sempre foi um entusiasta dos
                     conhecimentos científicos e um autodidata nato, agora ele dedica-se à apresentar
                     esse universo a estudantes de diversas faixas etárias, além de fortalecer dezenas de
